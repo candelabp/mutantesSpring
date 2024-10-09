@@ -28,5 +28,14 @@ public class HumanoService implements IHumanoService {
         if (humano.isEmpty()) throw new RuntimeException("No se ha encontrado el humano");
         return humano.get();
     }
+    @Override
+    public long contarHumanos() {
+        return humanoRepository.countByEsMutante(false);
+    }
+
+    @Override
+    public long contarMutantes() {
+        return humanoRepository.countByEsMutante(true);
+    }
 }
 

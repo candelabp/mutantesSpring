@@ -13,3 +13,4 @@ public class Humanodto {
     private boolean esMutante = false;
     private String[] dna = new String[6];;
 }
+

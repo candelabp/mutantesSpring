@@ -1,6 +1,7 @@
 package org.example.mutantesspring.business.facade.impl;
 
 import org.example.mutantesspring.Domain.dtos.Humanodto;
+import org.example.mutantesspring.Domain.dtos.Statsdto;
 import org.example.mutantesspring.business.facade.IHumanoFacade;
 import org.example.mutantesspring.business.mapper.HumanoMapper;
 import org.example.mutantesspring.business.service.impl.IHumanoService;
@@ -36,6 +37,17 @@ public class HumanoFacade implements IHumanoFacade {
         }
         // Devolver la entidad convertida en DTO con todos los datos
         return humanoMapper.humanoDto(humano);
+    }
+    public Statsdto obtenerEstadisticas() {
+        long countHumanDna = humanoService.contarHumanos();
+        long countMutantDna = humanoService.contarMutantes();
+        double ratio = (countHumanDna == 0) ? 0 : (double) countMutantDna / countHumanDna;
+
+        return Statsdto.builder()
+                .count_human_dna(countHumanDna)
+                .count_mutant_dna(countMutantDna)
+                .ratio(ratio)
+                .build();
     }
 }
 
