@@ -15,8 +15,9 @@ public class Humano {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private boolean esMutante = false;
+    @Column(nullable = false, unique = true)
     @Convert(converter = DnaConverter.class)
-    private String[] dna = new String[6];
+    private String[] dna;
 
 
 
