@@ -11,6 +11,8 @@ Este proyecto es una aplicación backend desarrollada con **Spring Boot** que pe
 - **Lombok** para reducir el código.
 - **H2 Database** para pruebas locales
 - **Postman** (para pruebas de API)
+- **DockerFile**
+
 
 ## Funcionalidades
 
