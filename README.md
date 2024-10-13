@@ -50,4 +50,20 @@ git clone https://github.com/candelabp/mutantesSpring.git
 cd proyecto-mutante
 
 
+### Despliegue en Render
+
+La API está desplegada en Render y puedes acceder a la siguiente ruta:
+
+- [Link Render](https://mutantesspring.onrender.com/)
+## Funcionalidades de la API
+- *POST* /personas/mutant: Verifica si un ADN pertenece a un mutante.
+  - URL: https://mutantesspring.onrender.com/humanos
+  
+- *GET* /stats: Retorna las estadísticas de mutantes y humanos.
+  - URL: https://mutantesspring.onrender.com/humanos/stats
+
+
+- *GET* /humanos/{id}: Devuelve una persona por ID.
+  - URL: https://mutantesspring.onrender.com/personas/1
+
 
